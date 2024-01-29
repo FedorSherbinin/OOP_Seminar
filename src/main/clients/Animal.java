@@ -22,25 +22,15 @@ public class Animal {
         this("Кличка", new Owner("Хозяин"), LocalDate.now(), new Illness("Болеет"));
     }
 
-    public String getNickName() {
-        return nickName;
-    }
+    public String getNickName() {return nickName;}
 
-    public Owner getOwner() {
-        return owner;
-    }
+    public Owner getOwner() {return owner;}
 
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
+    public LocalDate getBirthDate() {return birthDate;}
 
-    public Illness getIllness() {
-        return illness;
-    }
+    public Illness getIllness() {return illness;}
 
-    public void setIllness(Illness illness) {
-        this.illness = illness;
-    }
+    public void setIllness(Illness illness) {this.illness = illness;}
 
     public void lifeCycle() {
         wakeUp("12:00");
@@ -74,7 +64,8 @@ public class Animal {
     }
 
     @Override
-    public String toString() {
+    public String toString () {
         return String.format("nickName = %s, bd = %s, owner = %s, illness = %s", nickName, birthDate, owner, illness);
     }
+
 }
