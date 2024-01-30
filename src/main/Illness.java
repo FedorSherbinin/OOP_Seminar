@@ -1,4 +1,4 @@
-package main.clients;
+package main;
 
 public class Illness {
     String title;

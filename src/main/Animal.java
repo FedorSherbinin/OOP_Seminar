@@ -1,11 +1,11 @@
-package main.clients;
+package main;
 
 import java.time.LocalDate;
 
 public class Animal {
 
     // protected видно в классе и во всех наследниках
-    protected String nickName;
+    protected static String nickName;
     protected Owner owner;
     protected LocalDate birthDate;
     protected Illness illness;
@@ -61,6 +61,18 @@ public class Animal {
 
     private void sleep() {
         System.out.println("Животное уснуло!");
+    }
+
+    public void fly(){
+        System.out.println(nickName + "Животное летает");
+    }
+
+    public void toGo(){
+        System.out.println(nickName + "Животное бегает");
+    }
+
+    public void swim(){
+        System.out.println(nickName + "Животное плавает");
     }
 
     @Override
