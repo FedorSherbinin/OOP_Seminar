@@ -1,14 +1,14 @@
 package main;
 
+import main.clients.*;
+
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        Animal cat = new Animal("Солнышко", new Owner("Сергей Валерьевич"),
-                LocalDate.of(2021, 10, 05), new Illness("Лишай")); //Создаём экземпляр класса
+        Animal cat = new Cat("Солнышко", new Owner("Сергей Валерьевич"),
+                LocalDate.of(2021, 10, 05), new Illness("Лишай"), 10D); //Создаём экземпляр класса
 
 //        System.out.println(cat.getOwner());
 //        System.out.println(cat.getNickName());
@@ -26,27 +26,27 @@ public class Main {
 //
 //        cat.lifeCycle();
 
-        Animal catty = new Cat();
-        Dog goodBoy = new Dog();
+//        Animal catty = new Cat();
+//        Dog goodBoy = new Dog();
+//
+//        System.out.println(goodBoy.getType());
+//        System.out.println(catty.getType());
+//
+//        System.out.println(catty);
+//
+//        Cat.meow();
 
-        System.out.println(goodBoy.getType());
-        System.out.println(catty.getType());
-
-        System.out.println(catty);
-
-        Cat.meow();
-
-        Dog.toGo();
-        Dog.fly();
-        Dog.swim();
-
-        Fish.toGo();
-        Fish.fly();
-        Fish.swim();
-
-        Frog.toGo();
-        Frog.fly();
-        Frog.swim();
+//        Dog.toGo();
+//        Dog.fly();
+//        Dog.swim();
+//
+//        Fish.toGo();
+//        Fish.fly();
+//        Fish.swim();
+//
+//        Frog.toGo();
+//        Frog.fly();
+//        Frog.swim();
 
 
 //        List<Animal> animals = new ArrayList<Animal>();

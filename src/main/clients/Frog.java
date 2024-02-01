@@ -1,4 +1,4 @@
-package main;
+package main.clients;
 
 import java.time.LocalDate;
 
@@ -7,13 +7,13 @@ public class Frog extends Animal{
         super(nickName, owner, birthDate, illness);
     }
 
-    public void fly() {
-        System.out.println(nickName + "не умею");
+    @Override
+    public void eat() {
+        System.out.println("Лягушка ест");
     }
 
-    @Override
-    public void toGo() {
-        System.out.println(nickName + "очень плохо");
+    public void fly() {
+        System.out.println(nickName + "не умею");
     }
 
     @Override

@@ -1,8 +1,8 @@
-package main;
+package main.clients;
 
 import java.time.LocalDate;
 
-public class Animal {
+public abstract class Animal {
 
     // protected видно в классе и во всех наследниках
     protected static String nickName;
@@ -18,6 +18,7 @@ public class Animal {
         this.illness = illness;
     }
 
+
     public Animal() {
         this("Кличка", new Owner("Хозяин"), LocalDate.now(), new Illness("Болеет"));
     }
@@ -32,12 +33,14 @@ public class Animal {
 
     public void setIllness(Illness illness) {this.illness = illness;}
 
-    public void lifeCycle() {
-        wakeUp("12:00");
-        hunt();
-        eat();
-        sleep();
-    }
+//    public void lifeCycle() {
+//        wakeUp("12:00");
+//        hunt();
+//        eat();
+//        sleep();
+//    }
+
+
 
     private void wakeUp() {
         wakeUp("12:00");
@@ -55,9 +58,7 @@ public class Animal {
         System.out.println("Животное охотится!");
     }
 
-    private void eat() {
-        System.out.println("Животное ест!");
-    }
+    public abstract void eat();
 
     private void sleep() {
         System.out.println("Животное уснуло!");
@@ -65,10 +66,6 @@ public class Animal {
 
     public void fly(){
         System.out.println(nickName + "Животное летает");
-    }
-
-    public void toGo(){
-        System.out.println(nickName + "Животное бегает");
     }
 
     public void swim(){

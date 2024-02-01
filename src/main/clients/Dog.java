@@ -1,10 +1,15 @@
-package main;
+package main.clients;
 
 import java.time.LocalDate;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Goable, Huntable {
     public Dog(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
         super(nickName, owner, birthDate, illness);
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Собака ест");
     }
 
     public Dog() {
@@ -17,7 +22,7 @@ public class Dog extends Animal {
 
     @Override
     public void toGo() {
-        System.out.println(nickName + "бегает");
+        System.out.println("Животное бегает");
     }
 
     @Override
