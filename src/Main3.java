@@ -1,8 +1,5 @@
 import main.*;
-import main.clients.Bird;
-import main.clients.Cat;
-import main.clients.Dog;
-import main.clients.Frog;
+import main.clients.*;
 
 public class Main3 {
     public static void main(String[] args) {
@@ -11,8 +8,7 @@ public class Main3 {
         // Добавление животных и медперсонала
         clinic.addRunningAnimal(new Cat());
         clinic.addRunningAnimal(new Dog());
-        clinic.addRunningAnimal(new Frog());
-        clinic.addSwimmingAnimal(new Dog());
+        clinic.addSwimmingAnimal(new Fish());
         clinic.addFlyingAnimal(new Bird());
 
         clinic.addDoctor(new Doctor());

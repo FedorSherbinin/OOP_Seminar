@@ -2,7 +2,7 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Cat extends Animal implements Goable, Huntable {
+public class Cat extends Animal implements Goable {
 
     Double discount;
 

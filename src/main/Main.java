@@ -43,10 +43,7 @@ public class Main {
 //        Fish.toGo();
 //        Fish.fly();
 //        Fish.swim();
-//
-//        Frog.toGo();
-//        Frog.fly();
-//        Frog.swim();
+
 
 
 //        List<Animal> animals = new ArrayList<Animal>();
