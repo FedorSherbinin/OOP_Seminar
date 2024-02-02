@@ -2,9 +2,12 @@ package main.clients;
 
 import java.time.LocalDate;
 
-public class Dog extends Animal implements Goable, Huntable {
+public class Dog extends Animal implements Goable, Swimable {
     public Dog(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
         super(nickName, owner, birthDate, illness);
+    }
+    public Dog() {
+        super();
     }
 
     @Override
@@ -12,21 +15,18 @@ public class Dog extends Animal implements Goable, Huntable {
         System.out.println("Собака ест");
     }
 
-    public Dog() {
-        super();
-    }
-
-    public void fly() {
-        System.out.println(nickName + "не умею");
-    }
-
     @Override
-    public void toGo() {
-        System.out.println("Животное бегает");
+    public void run() {
+        System.out.println("Собака бегает");
     }
 
     @Override
     public void swim() {
-        System.out.println(nickName + "не умею");
+        System.out.println("Собака плавает но не как рыба");
+    }
+
+    @Override
+    public double getRunSpeed() {
+        return Goable.super.getRunSpeed();
     }
 }

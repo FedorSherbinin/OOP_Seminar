@@ -1,10 +1,8 @@
 package main.clients;
 
-import java.time.LocalDate;
-
-public class Frog extends Animal{
-    public Frog(String nickName, Owner owner, LocalDate birthDate, Illness illness) {
-        super(nickName, owner, birthDate, illness);
+public class Frog extends Animal implements Swimable, Goable{
+    public Frog() {
+        super();
     }
 
     @Override
@@ -12,12 +10,19 @@ public class Frog extends Animal{
         System.out.println("Лягушка ест");
     }
 
-    public void fly() {
-        System.out.println(nickName + "не умею");
+    @Override
+    public void swim() {
+        System.out.println("Лягушка плывет");
     }
 
     @Override
-    public void swim() {
-        System.out.println(nickName + "плавает");
+    public void run() {
+        System.out.println("Лягушка ходит");
     }
+
+    @Override
+    public double getSwimSpeed() {
+        return Swimable.super.getSwimSpeed();
+    }
+
 }

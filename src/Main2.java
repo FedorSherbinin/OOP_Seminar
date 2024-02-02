@@ -14,7 +14,8 @@ public class Main2 {
         list.add(cat);
         list.add(dog);
         System.out.println(list);
-        Animal animal = new Animal() {  //Анонимный клас
+        Animal animal = new Animal() {  //Анонимный класс
+
             @Override
             public void eat() {
 

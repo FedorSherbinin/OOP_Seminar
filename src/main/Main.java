@@ -60,6 +60,7 @@ public class Main {
 //            System.out.println(i + " " + animal);
 //            i++;
 //        }
+        System.out.println();
 
     }
 }
