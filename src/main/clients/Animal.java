@@ -64,14 +64,6 @@ public abstract class Animal {
         System.out.println("Животное уснуло!");
     }
 
-    public void fly(){
-        System.out.println(nickName + "Животное летает");
-    }
-
-    public void swim(){
-        System.out.println(nickName + "Животное плавает");
-    }
-
     @Override
     public String toString () {
         return String.format("nickName = %s, bd = %s, owner = %s, illness = %s", nickName, birthDate, owner, illness);
