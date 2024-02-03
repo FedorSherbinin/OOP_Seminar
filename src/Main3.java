@@ -5,18 +5,42 @@ public class Main3 {
     public static void main(String[] args) {
         VeterinaryClinic clinic = new VeterinaryClinic();
 
-        // Добавление животных и медперсонала
-        clinic.addRunningAnimal(new Cat());
-        clinic.addRunningAnimal(new Dog());
-        clinic.addSwimmingAnimal(new Fish());
-        clinic.addFlyingAnimal(new Bird());
+        // Добавление персонала в клинику
+        Doctor doctor = new Doctor();
+        Nurse nurse = new Nurse();
+        Surgeon surgeon = new Surgeon();
+        LabTechnician labTechnician = new LabTechnician();
 
-        clinic.addDoctor(new Doctor());
-        clinic.addNurse(new Nurse());
-        clinic.addSurgeon(new Surgeon());
-        clinic.addLabTechnician(new LabTechnician());
+        clinic.addPersonnel(new Doctor());
+        clinic.addPersonnel(new Nurse());
+        clinic.addPersonnel(new Surgeon());
+        clinic.addPersonnel(new LabTechnician());
+
+        // Добавление животных в клинику
+        Cat cat = new Cat();
+        Dog dog = new Dog();
+        Fish frog = new Fish();
+
+        clinic.addPatient(new Cat());
+        clinic.addPatient(new Dog());
+        clinic.addPatient(new Fish());
 
         // Выполнение действий в ветеринарной клинике
+        clinic.performMedicalExamination();
+        clinic.administerMedicationToAnimals();
+        clinic.conductLabTests();
+
+        // Выполнение действий в ветеринарной клинике
+        clinic.performMedicalExamination();
+        clinic.administerMedicationToAnimals();
+        clinic.conductLabTests();
+
+        // Удаление персонала и пациентов
+        clinic.removePersonnel(doctor);
+        clinic.removePersonnel(nurse);
+        clinic.removePatient(cat);
+
+        // Проверка после удаления
         clinic.performMedicalExamination();
         clinic.administerMedicationToAnimals();
         clinic.conductLabTests();

@@ -1,83 +1,114 @@
 package main;
 
-import main.clients.Flyable;
+import main.clients.Cat;
 import main.clients.Goable;
-import main.clients.Swimable;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class VeterinaryClinic {
-    private List<Goable> runningAnimals;
-    private List<Swimable> swimmingAnimals;
-    private List<Flyable> flyingAnimals;
-    private List<Doctor> doctors;
-    private List<Nurse> nurses;
-    private List<Surgeon> surgeons;
-    private List<LabTechnician> labTechnicians;
+    private List<Doctor> personnel;
+    private List<Object> patients; // Пациенты могут быть животными или другими объектами
 
     public VeterinaryClinic() {
-        runningAnimals = new ArrayList<>();
-        swimmingAnimals = new ArrayList<>();
-        flyingAnimals = new ArrayList<>();
-        doctors = new ArrayList<>();
-        nurses = new ArrayList<>();
-        surgeons = new ArrayList<>();
-        labTechnicians = new ArrayList<>();
+        personnel = new ArrayList<>();
+        patients = new ArrayList<>();
     }
 
-    public void addRunningAnimal(Goable animal) {
-        runningAnimals.add(animal);
+    public void addPersonnel(Doctor doctor) {
+        personnel.add(doctor);
     }
 
-    public void addSwimmingAnimal(Swimable animal) {
-        swimmingAnimals.add(animal);
+    public void addPersonnel(Nurse nurse) {
+        personnel.add(nurse);
     }
 
-    public void addFlyingAnimal(Flyable animal) {
-        flyingAnimals.add(animal);
+    public void addPersonnel(Surgeon surgeon) {
+        personnel.add(surgeon);
     }
 
-    public void addDoctor(Doctor doctor) {
-        doctors.add(doctor);
+    public void addPatient(Object patient) {
+        patients.add(patient);
     }
 
-    public void addNurse(Nurse nurse) {
-        nurses.add(nurse);
+    public void removePersonnel(Doctor doctor) {
+        personnel.remove(doctor);
     }
 
-    public void addSurgeon(Surgeon surgeon) {
-        surgeons.add(surgeon);
+    public void removePersonnel(Nurse nurse) {
+        personnel.remove(nurse);
     }
 
-    public void addLabTechnician(LabTechnician labTechnician) {
-        labTechnicians.add(labTechnician);
+    public void removePersonnel(Surgeon surgeon) {
+        personnel.remove(surgeon);
     }
 
-    // Дополнительные методы для работы с медицинским персоналом
+    public void removePatient(Object patient) {
+        patients.remove(patient);
+    }
+
+    // Дополнительные методы для работы с персоналом и пациентами
     public void performMedicalExamination() {
-        for (Doctor doctor : doctors) {
+        for (Doctor doctor : personnel) {
             doctor.diagnose();
         }
 
-        for (Nurse nurse : nurses) {
+        for (Nurse nurse : findNurses()) {
             nurse.assistDoctor();
         }
 
-        for (Surgeon surgeon : surgeons) {
+        for (Surgeon surgeon : findSurgeons()) {
             surgeon.performSurgery();
+        }
+
+        for (Object patient : patients) {
+            if (patient instanceof Goable) {
+                // Логика медицинского обследования пациента, который может бегать
+            }
         }
     }
 
     public void administerMedicationToAnimals() {
-        for (Nurse nurse : nurses) {
+        for (Nurse nurse : findNurses()) {
             nurse.administerMedication();
         }
     }
 
     public void conductLabTests() {
-        for (LabTechnician labTechnician : labTechnicians) {
+        for (LabTechnician labTechnician : findLabTechnicians()) {
             labTechnician.conductLabTests();
         }
     }
+
+    private List<Nurse> findNurses() {
+        List<Nurse> nurses = new ArrayList<>();
+        for (Doctor doctor : personnel) {
+            if (doctor instanceof Nurse) {
+                nurses.add((Nurse) doctor);
+            }
+        }
+        return nurses;
+    }
+
+    private List<Surgeon> findSurgeons() {
+        List<Surgeon> surgeons = new ArrayList<>();
+        for (Doctor doctor : personnel) {
+            if (doctor instanceof Surgeon) {
+                surgeons.add((Surgeon) doctor);
+            }
+        }
+        return surgeons;
+    }
+
+    private List<LabTechnician> findLabTechnicians() {
+        List<LabTechnician> labTechnicians = new ArrayList<>();
+        for (Nurse nurse : findNurses()) {
+            if (nurse instanceof LabTechnician) {
+                labTechnicians.add((LabTechnician) nurse);
+            }
+        }
+        return labTechnicians;
+
+    }
+
 }
