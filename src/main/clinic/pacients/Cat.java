@@ -1,4 +1,9 @@
-package main.clients;
+package main.clinic.pacients;
+
+import main.clinic.clients.Animal;
+import main.clinic.clients.Goable;
+import main.clinic.clients.Illness;
+import main.clinic.clients.Owner;
 
 import java.time.LocalDate;
 

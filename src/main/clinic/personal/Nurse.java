@@ -1,4 +1,4 @@
-package main;
+package main.clinic.personal;
 
 public class Nurse extends Doctor {
     // Состояние и поведение медсестры

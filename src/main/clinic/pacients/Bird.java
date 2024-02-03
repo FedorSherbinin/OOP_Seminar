@@ -1,4 +1,7 @@
-package main.clients;
+package main.clinic.pacients;
+
+import main.clinic.clients.Animal;
+import main.clinic.clients.Flyable;
 
 public class Bird extends Animal implements Flyable {
     public Bird() {

@@ -1,6 +1,5 @@
-package main;
-
-import main.clients.*;
+import main.clinic.clients.*;
+import main.clinic.pacients.Cat;
 
 import java.time.LocalDate;
 

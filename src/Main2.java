@@ -1,7 +1,7 @@
-import main.clients.Animal;
-import main.clients.Cat;
-import main.clients.Dog;
-import main.clients.Goable;
+import main.clinic.clients.Animal;
+import main.clinic.pacients.Cat;
+import main.clinic.pacients.Dog;
+import main.clinic.clients.Goable;
 
 import java.util.ArrayList;
 import java.util.List;

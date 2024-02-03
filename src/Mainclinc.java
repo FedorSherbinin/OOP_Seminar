@@ -1,7 +1,13 @@
-import main.*;
-import main.clients.*;
+import main.clinic.VeterinaryClinic;
+import main.clinic.pacients.Cat;
+import main.clinic.pacients.Dog;
+import main.clinic.pacients.Fish;
+import main.clinic.personal.Doctor;
+import main.clinic.personal.LabTechnician;
+import main.clinic.personal.Nurse;
+import main.clinic.personal.Surgeon;
 
-public class Main3 {
+public class Mainclinc {
     public static void main(String[] args) {
         VeterinaryClinic clinic = new VeterinaryClinic();
 
@@ -19,11 +25,15 @@ public class Main3 {
         // Добавление животных в клинику
         Cat cat = new Cat();
         Dog dog = new Dog();
-        Fish frog = new Fish();
+        Fish fish = new Fish();
 
         clinic.addPatient(new Cat());
         clinic.addPatient(new Dog());
         clinic.addPatient(new Fish());
+
+        // Вывод списка персонала и пациентов
+        clinic.printPersonnel();
+        clinic.printPatients();
 
         // Выполнение действий в ветеринарной клинике
         clinic.performMedicalExamination();

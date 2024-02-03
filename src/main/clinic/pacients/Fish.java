@@ -1,6 +1,9 @@
-package main.clients;
+package main.clinic.pacients;
 
-public class Fish extends Animal implements Swimable{
+import main.clinic.clients.Animal;
+import main.clinic.clients.Swimable;
+
+public class Fish extends Animal implements Swimable {
     public Fish () {
         super();
     }

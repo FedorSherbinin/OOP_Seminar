@@ -1,7 +1,10 @@
-package main;
+package main.clinic;
 
-import main.clients.Cat;
-import main.clients.Goable;
+import main.clinic.clients.Goable;
+import main.clinic.personal.Doctor;
+import main.clinic.personal.LabTechnician;
+import main.clinic.personal.Nurse;
+import main.clinic.personal.Surgeon;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +48,22 @@ public class VeterinaryClinic {
 
     public void removePatient(Object patient) {
         patients.remove(patient);
+    }
+
+    public void printPersonnel() {
+        System.out.println("Personnel List:");
+        for (Doctor doctor : personnel) {
+            System.out.println(" - " + doctor.getClass().getSimpleName());
+        }
+        System.out.println();
+    }
+
+    public void printPatients() {
+        System.out.println("Patients List:");
+        for (Object patient : patients) {
+            System.out.println(" - " + patient.getClass().getSimpleName());
+        }
+        System.out.println();
     }
 
     // Дополнительные методы для работы с персоналом и пациентами

@@ -1,8 +1,4 @@
-package main.clients;
-
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
+package main.clinic.clients;
 
 @FunctionalInterface
 public interface Goable {

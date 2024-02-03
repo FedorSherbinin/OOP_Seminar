@@ -1,4 +1,4 @@
-package main;
+package main.clinic.personal;
 
 public class Doctor {
     // Состояние и поведение врача

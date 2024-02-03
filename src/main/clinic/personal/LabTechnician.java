@@ -1,4 +1,4 @@
-package main;
+package main.clinic.personal;
 
 public class LabTechnician extends Nurse {
     // Специфические методы для лаборанта
