@@ -30,6 +30,7 @@ public class MainHW3 {
         System.out.println("\nSorted by name:");
         for (Pharmacy pharmacy : pharmacies) {
             System.out.println(pharmacy.getName() + " - " + pharmacy.getPrice());
+
         }
     }
 }

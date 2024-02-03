@@ -23,6 +23,6 @@ public class Pharmacy implements Comparable<Pharmacy>{
 
     public static int compareByName(Pharmacy p1, Pharmacy p2){
         return p1.name.compareTo(p2.name);
-    }
 
+    }
 }
