@@ -1,8 +1,8 @@
 package main.drugstore;
 
 public abstract class Component implements Comparable<Component> {
-    private String title;
-    private Double weight;
+    String title;
+    Double weight;
     private int power;
 
     public Component(String title, Double weight, int power) { //alt + Ins
@@ -30,4 +30,5 @@ public abstract class Component implements Comparable<Component> {
 //        }
 //        else return 0;
     }
+
 }

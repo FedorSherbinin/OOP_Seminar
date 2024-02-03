@@ -54,5 +54,6 @@ public class Mainclinc {
         clinic.performMedicalExamination();
         clinic.administerMedicationToAnimals();
         clinic.conductLabTests();
+
     }
 }

@@ -1,5 +1,5 @@
-package main.drugstore;
-
+import main.drugstore.Component;
+import main.drugstore.PharmacyTwo;
 import main.drugstore.component.Azitronite;
 import main.drugstore.component.Penicillin;
 import main.drugstore.component.Water;
