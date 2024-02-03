@@ -1,6 +1,4 @@
-package HomeWork3;
-
-import HomeWork3.apothecary.Pharmacy;
+import main.drugstore.Pharmacy;
 
 import java.util.ArrayList;
 import java.util.Collections;

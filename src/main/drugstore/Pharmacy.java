@@ -1,4 +1,4 @@
-package HomeWork3.apothecary;
+package main.drugstore;
 
 public class Pharmacy implements Comparable<Pharmacy>{
     private String name;
