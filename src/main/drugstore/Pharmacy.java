@@ -1,28 +1,36 @@
 package main.drugstore;
 
-public class Pharmacy implements Comparable<Pharmacy>{
-    private String name;
-    private int price;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
 
-    public Pharmacy(String name, int price){
-        this.name = name;
-        this.price = price;
+public class Pharmacy implements Iterator<Component>, Comparable<Pharmacy> {
+    private List<Component> pharmacy = new ArrayList<>();
+    private int index = 0;
+
+
+
+    public void addComponents(Component ... components) {
+        for(Component c : components){
+            this.pharmacy.add(c);
+        }
     }
 
-    public String getName() {
-        return name;
+    @Override
+    public boolean hasNext() {
+        return index < pharmacy.size();
     }
 
-    public int getPrice() {
-        return price;
+    @Override
+    public Component next() {
+        return (Component) pharmacy;
     }
+
     @Override
     public int compareTo(Pharmacy o) {
-        return Integer.compare(this.price, o.price);
-    }
-
-    public static int compareByName(Pharmacy p1, Pharmacy p2){
-        return p1.name.compareTo(p2.name);
+        return 0;
 
     }
+
 }

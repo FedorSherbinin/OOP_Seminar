@@ -1,8 +1,11 @@
 package main.drugstore;
 
+import java.util.Collections;
+import java.util.List;
+
 public abstract class Component implements Comparable<Component> {
-    String title;
-    Double weight;
+    private String title;
+    public Double weight;
     private int power;
 
     public Component(String title, Double weight, int power) { //alt + Ins
@@ -11,6 +14,7 @@ public abstract class Component implements Comparable<Component> {
         this.power = power;
     }
 
+
     @Override
     public String toString() {
         return String.format("Title = %s, power = %s", title, power);
@@ -18,17 +22,25 @@ public abstract class Component implements Comparable<Component> {
 
     @Override
     public int compareTo(Component o) {
-//        return this.power - o.power;
-
+////        return this.power - o.power;
+//
         return Integer.compare(this.power, o.power);
+//        return Double.compare(this.weight, o.weight);
+//
+//
+////        if (this.power > o.power) {
+////            return 1;
+////        }
+////        else if (this.power < o.power){
+////            return -1;
+////        }
+////        else return 0;
+//
+//
+    }
 
-//        if (this.power > o.power) {
-//            return 1;
-//        }
-//        else if (this.power < o.power){
-//            return -1;
-//        }
-//        else return 0;
+    public static void sortBy(List<Component> pharmacies) {
+        Collections.sort(pharmacies, (p1, p2) -> CharSequence.compare(p1.title, p2.title));
     }
 
 }
