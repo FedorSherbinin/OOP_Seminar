@@ -6,15 +6,17 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Pharmacy implements Iterator<Component>, Comparable<Pharmacy> {
-    private List<Component> pharmacy = new ArrayList<>();
+    private List<Component> pharmacy = new ArrayList<Component>();
     private int index = 0;
-
+    private Double weight;
+    private String title;
 
 
     public void addComponents(Component ... components) {
         for(Component c : components){
             this.pharmacy.add(c);
         }
+
     }
 
     @Override
@@ -29,8 +31,12 @@ public class Pharmacy implements Iterator<Component>, Comparable<Pharmacy> {
 
     @Override
     public int compareTo(Pharmacy o) {
-        return 0;
+        return this.weight.compareTo(o.weight);
 
+    }
+
+    public static void sortBy(List<Component> pharmacies) {
+        Collections.sort(pharmacies, (b1, b2) -> CharSequence.compare(b1.title, b2.title));
     }
 
 }

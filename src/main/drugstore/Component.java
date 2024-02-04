@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 public abstract class Component implements Comparable<Component> {
-    private String title;
+    String title;
     public Double weight;
     private int power;
 
@@ -17,7 +17,7 @@ public abstract class Component implements Comparable<Component> {
 
     @Override
     public String toString() {
-        return String.format("Title = %s, power = %s", title, power);
+        return String.format("Title = %s, weight = %s, power = %s", title, weight, power);
     }
 
     @Override
@@ -28,19 +28,15 @@ public abstract class Component implements Comparable<Component> {
 //        return Double.compare(this.weight, o.weight);
 //
 //
-////        if (this.power > o.power) {
-////            return 1;
-////        }
-////        else if (this.power < o.power){
-////            return -1;
-////        }
-////        else return 0;
+//        if (this.power > o.power) {
+//            return 1;
+//        }
+//        else if (this.power < o.power){
+//            return -1;
+//        }
+//        else return 0;
 //
 //
-    }
-
-    public static void sortBy(List<Component> pharmacies) {
-        Collections.sort(pharmacies, (p1, p2) -> CharSequence.compare(p1.title, p2.title));
     }
 
 }
