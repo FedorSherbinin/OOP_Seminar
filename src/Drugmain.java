@@ -1,3 +1,4 @@
+import main.drugstore.component.Aspirin;
 import main.drugstore.Component;
 import main.drugstore.Pharmacy;
 import main.drugstore.component.Azitronite;
@@ -16,6 +17,7 @@ public class Drugmain {
         Component water = new Water("Water", 100D, 1);
         Component azitronite = new Azitronite("Azitronite", 20D, 14);
         Component penicillin = new Penicillin("Penicillin", 1.6D, 6);
+        Component aspirin = new Aspirin("Aspirin", 10D, 4);
 
 //        PharmacyTwo p1 = new PharmacyTwo();
 //        p1.addComponents(water, azitronite);
@@ -46,6 +48,7 @@ public class Drugmain {
         components.add(azitronite);
         components.add(water);
         components.add(penicillin);
+        components.add(aspirin);
 
         System.out.println(components);
 
@@ -55,19 +58,21 @@ public class Drugmain {
         System.out.println("----");
 
         List<Component> pharmacy = new ArrayList<>();
-        pharmacy.add(water);
-        pharmacy.add(azitronite);
         pharmacy.add(penicillin);
+        pharmacy.add(azitronite);
+        pharmacy.add(water);
+        pharmacy.add(aspirin);
+
 
         System.out.println(pharmacy);
 
-        Collections.sort(pharmacy);
+        Collections.sort(pharmacy, Comparator.reverseOrder());
         System.out.println(pharmacy);
 
         System.out.println("----");
 
         System.out.println(pharmacy);
-        
+
         sortBy(pharmacy);
         System.out.println(pharmacy);
 

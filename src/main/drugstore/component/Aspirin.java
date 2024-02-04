@@ -1,0 +1,10 @@
+package main.drugstore.component;
+
+import main.drugstore.Component;
+
+public class Aspirin extends Component {
+
+    public Aspirin(String title, Double weight, int power) {
+        super(title, weight, power);
+    }
+}
