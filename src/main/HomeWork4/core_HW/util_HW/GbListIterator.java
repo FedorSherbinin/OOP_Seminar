@@ -1,6 +1,6 @@
-package main.HomeWork4.coreHW.utilHW;
+package main.HomeWork4.core_HW.util_HW;
 
-import main.HomeWork4.coreHW.Node;
+import main.HomeWork4.core_HW.Node;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

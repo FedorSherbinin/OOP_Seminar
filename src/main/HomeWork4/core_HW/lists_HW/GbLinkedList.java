@@ -1,7 +1,7 @@
-package main.HomeWork4.coreHW.listsHW;
+package main.HomeWork4.core_HW.lists_HW;
 
-import main.HomeWork4.coreHW.Node;
-import main.HomeWork4.coreHW.utilHW.GbListIterator;
+import main.HomeWork4.core_HW.Node;
+import main.HomeWork4.core_HW.util_HW.GbListIterator;
 
 import java.util.Iterator;
 

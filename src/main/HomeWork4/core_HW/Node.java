@@ -1,4 +1,4 @@
-package main.HomeWork4.coreHW;
+package main.HomeWork4.core_HW;
 
 public class Node <T>{
     public T data;

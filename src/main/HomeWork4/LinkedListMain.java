@@ -1,6 +1,6 @@
 package main.HomeWork4;
 
-import main.HomeWork4.coreHW.listsHW.GbLinkedList;
+import main.HomeWork4.core_HW.lists_HW.GbLinkedList;
 
 public class LinkedListMain {
     public static void main(String[] args) {
