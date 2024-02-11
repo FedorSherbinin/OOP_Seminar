@@ -1,4 +1,4 @@
-package main.drugstore.component;
+package main.drugstore.components;
 
 import main.drugstore.Component;
 

@@ -8,6 +8,10 @@ public abstract class Component implements Comparable<Component> {
     public Double weight;
     private int power;
 
+    public int getPower() {
+        return power;
+    }
+
     public Component(String title, Double weight, int power) { //alt + Ins
         this.title = title;
         this.weight = weight;

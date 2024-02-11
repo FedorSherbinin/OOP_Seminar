@@ -7,7 +7,7 @@ import main.clinic.personal.LabTechnician;
 import main.clinic.personal.Nurse;
 import main.clinic.personal.Surgeon;
 
-public class Mainclinc {
+public class Mainclinic {
     public static void main(String[] args) {
         VeterinaryClinic clinic = new VeterinaryClinic();
 
