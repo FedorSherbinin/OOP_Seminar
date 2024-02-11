@@ -37,7 +37,7 @@ public class GbLinkedList<T> implements Iterable<T>{
             head = newNode;
             tail = newNode;
         }else {
-            newNode.prev = head;
+            newNode.prev = tail;
             tail.next = newNode;
             tail = newNode;
         }
@@ -104,4 +104,73 @@ public class GbLinkedList<T> implements Iterable<T>{
     public Iterator<T> iterator() {
         return new GbListIterator<>();
     }
+
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+
+    // Метод для удаления элемента из начала списка
+    public void removeFirst() {
+        if (head == null) {
+            return; // Ничего не делаем, если список пуст
+        }
+
+        head = head.next;
+        if (head != null) {
+            head.prev = null;
+        } else {
+            tail = null; // Если после удаления головы список пуст, обнуляем хвост
+        }
+
+        size--;
+    }
+
+    // Метод для удаления элемента из конца списка
+    public void removeLast() {
+        if (isEmpty()) {
+            return;
+        } else if (size() == 1) {
+            tail = null;
+            head = null;
+        } else {
+            Node<T> secondToLast = null;
+            Node<T> last = head;
+            while (last.next != null) {
+                secondToLast = last;
+                last = last.next;
+            }
+            secondToLast.next = null;
+            tail = secondToLast;
+        }
+        --size;
+    }
+
+    private int size() {
+        return 0;
+    }
+
+    // Метод для удаления элемента по индексу
+    public void removeAtIndex(int index) {
+        if (index < 0 || index >= size) {
+            throw new IndexOutOfBoundsException("Index out of bounds");
+        }
+
+        if (index == 0) {
+            removeFirst();
+        } else if (index == size - 1) {
+            removeLast();
+        } else {
+            Node<T> current = head;
+            for (int i = 0; i < index; i++) {
+                current = current.next;
+            }
+
+            current.prev.next = current.next;
+            current.next.prev = current.prev;
+
+            size--;
+        }
+    }
+
 }

@@ -23,6 +23,8 @@ public class LinkedListMain {
         System.out.println("Элемент с индексом 4: " + list.getAtIndex(4));
         System.out.println("Элемент с индексом 5: " + list.getAtIndex(5));
 
+        System.out.println("============================");
+
         list.insertAtIndex(2, 2);
         System.out.println("После вставки по индексу 2: " + list.toString());
 
@@ -30,5 +32,21 @@ public class LinkedListMain {
         System.out.println("После вставки по индексу 3: " + list.toString());
 
 
+        System.out.println("============================");
+
+        list.removeFirst();
+        System.out.println("После удаления первого элемента: " + list.toString());
+
+        list.removeLast();
+        System.out.println("Элементы списка после удаления последнего: " + list.toString());
+
+        list.removeAtIndex(3);
+        System.out.println("После удаления элемента с индексом 3: " + list.toString());
+        System.out.println("Элементы списка: " + list.toString());
+
+
+        System.out.println("============================");
+        System.out.println("Размер списка: " + list.getSize());
+        System.out.println("Элементы списка: " + list.toString());
     }
 }
