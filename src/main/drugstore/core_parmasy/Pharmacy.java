@@ -1,4 +1,7 @@
-package main.drugstore;
+package main.drugstore.core_parmasy;
+
+import main.drugstore.core_parmasy.util_parmasy.Component;
+import main.drugstore.core_parmasy.util_parmasy.Copmparable;
 
 import java.util.ArrayList;
 import java.util.Iterator;

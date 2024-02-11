@@ -3,6 +3,8 @@ package main.drugstore;
 import main.drugstore.components.Azitronite;
 import main.drugstore.components.Penicillin;
 import main.drugstore.components.Water;
+import main.drugstore.core_parmasy.util_parmasy.Component;
+import main.drugstore.core_parmasy.Pharmacy;
 
 import java.util.*;
 

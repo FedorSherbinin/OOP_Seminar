@@ -1,7 +1,4 @@
-package main.drugstore;
-
-import java.util.Collections;
-import java.util.List;
+package main.drugstore.core_parmasy.util_parmasy;
 
 public abstract class Component implements Comparable<Component> {
     String title;
