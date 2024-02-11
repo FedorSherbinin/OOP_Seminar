@@ -40,7 +40,7 @@ public class Drugmain {
         Collections.sort(components,Comparator.reverseOrder());
         System.out.println(components);
 
-        System.out.println("----------[ Домашнее задание ]----------------------");
+        System.out.println("==============================");
 
         List<Pharmacy> pharmacys = new ArrayList<>();
         pharmacys.add(p4);
@@ -51,14 +51,14 @@ public class Drugmain {
 
         System.out.println(pharmacys);
 
-        System.out.println("----------[ До сортировки Pharmacy ]----------------------");
+        System.out.println("=================================");
         for (Pharmacy pharmacy : pharmacys) {
             System.out.println(pharmacy);
         }
 
         Collections.sort(pharmacys);
 
-        System.out.println("-------------[ После сортировки Pharmacy]-------------------");
+        System.out.println("==================================");
         for (Pharmacy pharmacy : pharmacys) {
             System.out.println(pharmacy);
         }
