@@ -42,11 +42,6 @@ public class LinkedListMain {
 
         list.removeAtIndex(3);
         System.out.println("После удаления элемента с индексом 3: " + list.toString());
-        System.out.println("Элементы списка: " + list.toString());
 
-
-        System.out.println("============================");
-        System.out.println("Размер списка: " + list.getSize());
-        System.out.println("Элементы списка: " + list.toString());
     }
 }
