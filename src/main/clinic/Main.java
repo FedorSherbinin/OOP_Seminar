@@ -1,3 +1,5 @@
+package main.clinic;
+
 import main.clinic.clients.*;
 import main.clinic.pacients.Cat;
 

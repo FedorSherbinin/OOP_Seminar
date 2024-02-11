@@ -1,3 +1,5 @@
+package main.clinic;
+
 import main.clinic.clients.Animal;
 import main.clinic.pacients.Cat;
 import main.clinic.pacients.Dog;

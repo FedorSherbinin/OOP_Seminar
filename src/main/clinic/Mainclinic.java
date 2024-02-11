@@ -1,4 +1,6 @@
-import main.clinic.VeterinaryClinic;
+package main.clinic;
+
+import main.clinic.coreClinic.VeterinaryClinic;
 import main.clinic.pacients.Cat;
 import main.clinic.pacients.Dog;
 import main.clinic.pacients.Fish;
