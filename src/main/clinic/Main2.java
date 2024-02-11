@@ -20,7 +20,6 @@ public class Main2 {
 
             @Override
             public void eat() {
-
             }
         };
     }

@@ -1,4 +1,4 @@
-package main.clinic.coreClinic;
+package main.clinic.core_Clinic;
 
 import main.clinic.clients.Goable;
 import main.clinic.personal.Doctor;

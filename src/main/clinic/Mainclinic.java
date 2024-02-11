@@ -1,6 +1,6 @@
 package main.clinic;
 
-import main.clinic.coreClinic.VeterinaryClinic;
+import main.clinic.core_Clinic.VeterinaryClinic;
 import main.clinic.pacients.Cat;
 import main.clinic.pacients.Dog;
 import main.clinic.pacients.Fish;
@@ -56,6 +56,7 @@ public class Mainclinic {
         clinic.performMedicalExamination();
         clinic.administerMedicationToAnimals();
         clinic.conductLabTests();
+
 
     }
 }
